@@ -1,0 +1,70 @@
+$sort-time: 7s;
+$animation-box-shadow: 0 0 5px 0 darkorange, 0 0 5px 0 rgba(255, 166, 0, 0.455), inset 0 0 5px 0 rgba(255, 166, 0, 0.34);
+$animation-color: rgba(255, 140, 0, 0.612);
+$animation-outline: 2px double darkorange;
+
+
+.moving-box-container{
+    display: flex; justify-content: center; align-items: center;
+    width: 100%; height: 50%;
+
+    @media(max-width: 800px) { margin-bottom: 25px;}
+
+    .moving-box{
+        font-size: 2.2rem; font-weight: bold;
+        outline: 4px double white;
+        padding: .75rem; margin: 0 1.25rem 0 1.25rem;
+        box-shadow: 0 0 15px 0 white, 0 0 10px 0 rgba(255, 255, 255, 0.453), inset 0 0 5px 0 rgba(255, 255, 255, 0.355);
+        text-shadow: 0 0 3px white;
+        background-color: rgb(29, 29, 29);
+    }
+    .sort-one{ animation: sort-first $sort-time ease-out 1s infinite; }
+    .sort-second{ animation: sort-second $sort-time ease-out 1s infinite;}
+    .sort-third {animation: sort-third $sort-time ease-out 1s infinite;}
+    .sort-fourth {animation: sort-fourth $sort-time ease-out 1s infinite;}
+}
+
+
+@keyframes sort-first{
+    0%{ }
+    15%{ transform: translateY(-120%);}
+    30%{ transform: translateY(-120%) translateX(375%);}
+    45%{ transform: translateX(375%) translateY(0);
+        box-shadow: 0 0 15px 0 white, 0 0 10px 0 rgba(255, 255, 255, 0.453), inset 0 0 5px 0 rgba(255, 255, 255, 0.355);
+        color: white; outline: 4px double white;}
+    75%{ transform: translateX(375%) translateY(0) scale(1.25);}
+    80%{ box-shadow: $animation-box-shadow; color: $animation-color; outline: $animation-outline;}
+}
+
+@keyframes sort-second{
+    0%{  }
+    15%{ transform: translateY(120%);}
+    30%{ transform: translateY(120%) translateX(375%);}
+    45%{ transform: translateX(375%) translateY(0);
+        box-shadow: 0 0 15px 0 white, 0 0 10px 0 rgba(255, 255, 255, 0.453), inset 0 0 5px 0 rgba(255, 255, 255, 0.355);
+        color: white; outline: 4px double white;}
+    75%{ transform: translateX(375%) translateY(0) scale(1.25);}
+    80%{ box-shadow: $animation-box-shadow; color: $animation-color; outline: $animation-outline;}
+}
+
+@keyframes sort-third{
+    0% {}
+    15%{ transform: translateY(120%);}
+    30%{ transform: translateY(120%) translateX(-190%);}
+    45%{ transform: translateX(-190%) translateY(0);
+        box-shadow: 0 0 15px 0 white, 0 0 10px 0 rgba(255, 255, 255, 0.453), inset 0 0 5px 0 rgba(255, 255, 255, 0.355);
+        color: white; outline: 4px double white;}
+    75%{ transform: translateX(-190%) translateY(0) scale(1.25);}
+    80%{ box-shadow: $animation-box-shadow; color: $animation-color; outline: $animation-outline;}
+}
+
+@keyframes sort-fourth{
+    0% {}
+    15%{ transform: translateY(-120%);}
+    30%{ transform: translateY(-120%) translateX(-550%);}
+    45%{ transform: translateX(-550%) translateY(0);
+        box-shadow: 0 0 15px 0 white, 0 0 10px 0 rgba(255, 255, 255, 0.453), inset 0 0 5px 0 rgba(255, 255, 255, 0.355);
+        color: white; outline: 4px double white;}
+    75%{ transform: translateX(-550%) translateY(0) scale(1.25);}
+    80%{ box-shadow: $animation-box-shadow; color: $animation-color; outline: $animation-outline;}
+}

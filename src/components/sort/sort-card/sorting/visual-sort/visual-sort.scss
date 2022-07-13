@@ -1,0 +1,69 @@
+@import '../../../../../style/shared.scss';
+
+
+.bars-container{
+    width: 90%; height: 200px;
+    margin-top: 15px;
+    display: flex; justify-content: center; align-items: center;
+
+    .bars{
+        height: 100%; width: 100%;
+        margin-right: 15px;
+        display: flex; align-items: flex-end;
+
+        div{
+            width: 100%; 
+            display: flex; align-items: flex-end; justify-content: center;
+            font-weight: bold; font-size: $general-size*1.25; font-family:'Courier New', Courier, monospace;
+            border-top-right-radius: 5px; border-top-left-radius: 5px;
+            background-color: $background-color; color: $text-color;
+            text-shadow: 0 1px 1px rgb(162, 98, 19);
+
+            @media(max-width: 800px) { font-size: $general-size;}
+            @media(max-width: 600px) { font-size: $general-size*.75;}
+        }
+
+        @media(max-width: 600px){ width: 15px; margin-right: 5px;}
+    }
+}
+
+.counting-array{
+    width: 100%;
+    display: flex; justify-content: center; align-items: center;
+    font-size: 2.5rem; font-weight: bold; font-family: $main-font;
+    
+    @media(max-width: 700px) { font-size: 1.5rem; }
+    @media(max-width: 600px) { font-size: .75rem; }
+    @media(max-width: 450px) { font-size: .5rem; }
+
+    div{
+        padding: 7px; margin: 20px 5px 0 5px;
+        border: 2px solid black; border-radius: 7px;
+        background-color: $background-color; color: $text-color;
+    }
+}
+
+.bucket-array{
+    width: 100%; margin-top: 15px;
+    display: flex; justify-content: center; align-items: center;
+    font-weight: bold; font-family: $main-font;
+
+    @media(max-width: 700px) { font-size: .75rem; }
+    @media(max-width: 600px) { font-size: .5rem; }
+    @media(max-width: 450px) { font-size: .35rem; }
+
+
+    .bucket{
+        padding: 7px; margin-right: 7px;
+        border: 2px solid black; border-radius: 7px;
+        background-color: $background-color; color: $text-color;
+    }
+}
+
+
+
+.radix-position{
+    position: absolute; top: 0; margin: 0;
+    font-size: 1.3rem; font-weight: bold; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(255, 85, 0); text-shadow: 0 0 1px rgba(0, 0, 0, 0.659), 0 1px 0 black;
+}

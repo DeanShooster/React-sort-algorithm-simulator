@@ -1,0 +1,19 @@
+@import '../../style/shared.scss';
+
+.page404{
+    display: flex; flex-flow: column; align-items: center; justify-content: center;
+    width: 100%;  min-height: 500px; text-align: center;
+    text-shadow: 0 0 1px black;
+    font-family: $main-font;
+
+    p{
+        padding: 20px;
+        font-size: $general-size*1.5; 
+        margin: 0 0 25px 0;
+    }
+
+    a{
+        color: blue;
+        &:hover{ color: darkorange;}
+    }
+}

@@ -1,0 +1,33 @@
+$inner-circle: 20px;
+
+.algo-shape-container{
+    display: flex; align-items: center; justify-content: center;
+    width: 100%; height: 25%;
+    padding-right: 10px;
+
+    @media(max-width: 800px){ height: 50%;}
+
+    .jumping-waves{
+        width: 300px; height: 300px;
+        position: relative;
+        transform-style: preserve-3d;
+        transform: perspective(500px) rotateX(55deg);
+
+        @media(max-width: 400px) { width: 275px; height: 275px;}
+
+        span{
+            position: absolute;
+            border: 3px solid white;
+            box-shadow: 0 0 5px 0 #ccc, inset 0 0 5px 0 #ccc;
+            border-radius: 50%;
+            animation: jump cubic-bezier(.4,.37,.26,1.59) 2.75s infinite;
+        }
+
+        @for $i from 0 to 8 {
+            & span:nth-child(#{$i + 1}){ top: $i*$inner-circle; bottom: $i*$inner-circle; left: $i*$inner-circle; right: $i*$inner-circle; 
+            animation-delay: (8 - $i)*.2s ;}
+        }
+    }
+}
+
+@keyframes jump{  50% { transform: translateZ(100px);} }

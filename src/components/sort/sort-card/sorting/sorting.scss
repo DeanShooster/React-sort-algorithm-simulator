@@ -1,0 +1,49 @@
+@import '../../../../style/shared.scss';
+
+$padding-margin: 7px;
+
+.sorting-container{
+    display: flex; flex-flow: column; align-items: center;
+    position: absolute; bottom: 0;
+    color: $background-color;
+
+    .input-array-container{
+
+        display: flex; align-items: center; flex-wrap: wrap; justify-content: center;
+
+        label{ font-weight: bold; font-family: $main-font; text-shadow: 0 1px 0 black; font-size: 1.2rem;}
+
+        input{
+            padding: $padding-margin; margin: $padding-margin;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            border-radius: $padding-margin; border: 4px double $background-color;
+            font-size: $general-size*.8; font-weight: bold;
+        }
+
+        .input-info-icon{
+            font-size: 2rem; 
+            &:hover{ cursor: pointer; color: $text-color; background-color: $background-color;}
+        }
+
+        .info-bubble{
+            position: absolute; left: 0;
+            padding: $padding-margin;
+            border-radius: $padding-margin; outline: 1px solid $text-color;
+            background-color: $background-color; color: $text-color;
+            p{ margin: 0; padding: $padding-margin; font-size: $general-size*.9; }
+        }
+    }
+
+    .button-container{ display: flex; align-items: center; justify-content: center; flex-wrap: wrap;}
+
+    button{
+        color: $text-color; background-color: $background-color;
+        padding: $padding-margin; margin: $padding-margin;
+        border-radius: $padding-margin;
+        font-size: $general-size*.9; font-weight: bold;
+
+        &:hover{ cursor: pointer; color: $background-color; background-color: $text-color; }
+    }
+
+    .sort-button{ font-size: 1.25rem; }
+}

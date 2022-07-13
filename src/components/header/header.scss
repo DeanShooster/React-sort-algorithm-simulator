@@ -1,0 +1,70 @@
+@import '../../style/shared.scss';
+
+body{ margin: 0;  overflow-x: hidden;  background-color: rgba(179, 203, 221, 0.889);}
+
+    ::-webkit-scrollbar { width: 15px; }
+    ::-webkit-scrollbar-track { background: rgb(38, 38, 38); }
+    ::-webkit-scrollbar-thumb { background: linear-gradient(rgb(152, 152, 152), rgb(75, 75, 75)); border-radius: 25px;  }
+    ::-webkit-scrollbar-thumb:hover { background: linear-gradient(rgb(189, 189, 189), rgb(117, 117, 117)); }
+
+header{
+    background-color: $background-color;  color: $text-color;
+    font-family: $main-font; text-shadow: 0 0 2px $text-color;
+    min-height: $general-size;
+    display: flex; align-items: center;
+
+    .website-title{
+        h1{  margin:0; padding: $general-size*0.75 0 0 $general-size*0.75; }
+        p{ margin: 0; padding: 0 0 $general-size $general-size*3; }
+
+        @media(max-width: 400px){
+            h1{ font-size: $general-size*1.5;}
+            p{ font-size: $general-size*0.75;}
+        }
+    }
+
+    .nav{
+        width: 30%;
+        margin: auto;
+        display: flex; align-items: center; justify-content: space-around;
+        
+        a{
+            color: $text-color;
+            text-decoration: none;
+            font-size: $general-size*1.25;
+
+            &:hover{  transform: scale(1.15);  color: $hover-color;}
+        }
+    }
+
+    
+    .nav-burger-bar{
+        width: $general-size*7.2; 
+        position: absolute; right: 0; top: 5.25rem;
+        display: flex; flex-flow: column; align-items: center; justify-content: space-around;
+        background-color: $background-color;
+        border-bottom-left-radius: 15px; border-left: 1px solid $text-color; border-bottom: 1px solid $text-color;
+        box-shadow: 0 10px 25px 5px rgba(0, 0, 0, 0.553);
+
+        @media(max-width: 400px){ top: 4.4rem; }
+
+        a{
+            color: $text-color;
+            text-decoration: none;
+            font-size: $general-size*1.25;
+            padding: 15px;
+
+            &:hover{  transform: scale(1.15);  color: $hover-color;}
+        }
+    }
+
+    .burger-menu-svg{
+        margin-left: auto;
+        font-size: $general-size*2.75; padding-right: $general-size;
+
+        &:hover{  cursor: pointer;  color: $hover-color; }
+    }
+}
+
+
+.selected{ color : yellow; outline: yellow 1px solid;}
