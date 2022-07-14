@@ -28,5 +28,12 @@ It is build with React library and Javascript.
 
 <h2 align="center">Demo Videos</h2>
 
+**<u>Note:</u>** Sorting speed was X multiplied in order to shorten video length.
 
+**Demo app view**
 
+https://user-images.githubusercontent.com/92792238/178988597-fb8bdc3a-fb48-4de7-8fa6-b7d0f9839c22.mp4
+
+**Demo app sort algorithms view**
+
+https://user-images.githubusercontent.com/92792238/178988796-d6e3e387-ca33-4b62-b128-95c181e8966f.mp4
